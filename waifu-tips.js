@@ -1,5 +1,3 @@
-console.log(1111);
-
 String.prototype.render = function (context) {
     var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
 
