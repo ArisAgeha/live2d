@@ -7,14 +7,13 @@ clock()
 
 function clock() {
   try{
-    
     initModel('https://raw.githack.com/ArisAgeha/live2d/master/');
     console.log('success');
     return;
     
   } catch(e) {
     
-    consol.log(e);
+    console.log(e);
     console.log('init fail!!!');
     setTimeout(function(){
         clock();
