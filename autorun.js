@@ -6,3 +6,7 @@
   setTimeout(function(){
       initModel('https://raw.githack.com/ArisAgeha/live2d/master/');
   }, 1000);
+
+  setTimeout(function(){
+      initModel('https://raw.githack.com/ArisAgeha/live2d/master/');
+  }, 5000);
