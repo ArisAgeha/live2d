@@ -1,23 +1,8 @@
-// 加载 CSS
-$("<link>").attr({ href: "/assets/waifu.css", rel: "stylesheet", type: "text/css" }).appendTo('head');
+  $("<link>").attr({ href: "https://raw.githack.com/ArisAgeha/live2d/master/waifu.css", rel: "stylesheet", type: "text/css" }).appendTo('head');
+  $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" width="280" height="250" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
+  $('body').append($('<script src="https://raw.githack.com/ArisAgeha/live2d/master/live2d.js"></script>'));
+  $('body').append($('<script src="https://raw.githack.com/ArisAgeha/live2d/master/waifu-tips.js"></script>'));
 
-// 插入 DIV
-$('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" width="280" height="250" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
-// 加载 JS
-$.ajax({
-    url: '/assets/live2d.js',
-    dataType: "script",
-    cache: true,
-    async: false
-});
-$.ajax({
-    url: '/assets/waifu-tips.js',
-    dataType: "script",
-    cache: true,
-    async: false
-});
-
-// 初始化看板娘，会自动加载指定目录下的 waifu-tips.json
-setTimeout(() => {
-	initModel('/assets/');
-}, 1500)
+  setTimeout(function(){
+      initModel('https://raw.githack.com/ArisAgeha/live2d/master/');
+  }, 1000);
