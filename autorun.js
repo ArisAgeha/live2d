@@ -6,16 +6,18 @@ $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="l
 // 加载 JS
 $.ajax({
     url: '/assets/live2d.js',
-    dataType: "jsonp",
+    dataType: "script",
     cache: true,
     async: false
 });
 $.ajax({
     url: '/assets/waifu-tips.js',
-    dataType: "jsonp",
+    dataType: "script",
     cache: true,
     async: false
 });
 
 // 初始化看板娘，会自动加载指定目录下的 waifu-tips.json
-initModel('/assets/');
+setTimeout(() => {
+	initModel('/assets/');
+}, 1500)

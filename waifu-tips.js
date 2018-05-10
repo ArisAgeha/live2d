@@ -182,7 +182,7 @@ function initModel(waifuPath){
 	$.ajax({
         cache: true,
         url: waifuPath+'waifu-tips.json',
-        dataType: "jsonp",
+        dataType: "json",
         success: function (result){
             $.each(result.mouseover, function (index, tips){
                 $(document).on("mouseover", tips.selector, function (){
@@ -233,7 +233,7 @@ function loadRandModel(){
     $.ajax({
         cache: false,
         url: '//api.fghrsh.net/live2d/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
-        dataType: "jsonp",
+        dataType: "json",
         success: function (result){
             if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
                 showMessage('我还没有其他衣服呢', 3000, true);
@@ -253,7 +253,7 @@ function loadOtherModel(){
     $.ajax({
         cache: false,
         url: '//api.fghrsh.net/live2d/'+modelTexturesRandMode+'/?id='+modelId,
-        dataType: "jsonp",
+        dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
             showMessage(result.model['message'], 3000, true);
